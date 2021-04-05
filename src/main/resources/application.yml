@@ -1,0 +1,10 @@
+resilience4j:
+    ratelimiter:
+        configs:
+            default:
+                limitForPeriod: 10
+                limitRefreshPeriod: 3600s
+                timeoutDuration: 0
+        instances:
+            tenantRateLimit:
+                baseConfig: default
